@@ -1,0 +1,17 @@
+{
+  "name": "Figma to ArkUI",
+  "id": "1664576708020416684",
+  "api": "1.0.0",
+  "main": "apps/plugin/dist/code.js",
+  "ui": "apps/plugin/dist/index.html",
+  "editorType": ["figma", "dev"],
+  "capabilities": ["inspect", "codegen"],
+  "permissions": [],
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": ["none"]
+  },
+  "codegenLanguages": [
+    { "label": "ArkUI", "value": "arkui" }
+  ]
+}

@@ -1,0 +1,16 @@
+FigmaToArkUI
+
+This project is a modified version of FigmaToCode.
+
+Original project: FigmaToCode
+Original author: Bernardo Ferrari
+Original project URL: https://github.com/bernaferrari/FigmaToCode
+Original project license: GNU General Public License version 3
+
+Modified by: Lunriv
+Modification year: 2026
+Project repository: https://github.com/Lunriv/FigmaToArkUI
+
+The primary changes add and optimize the ArkUI code generator, split output modes into Snippet, Component, Builder, and Preview, and remove the HTML, Tailwind, Flutter, SwiftUI, Compose, and Debug App implementations and their dedicated UI and runtime paths.
+
+For the complete license text, see LICENSE. This notice does not replace or modify any term of GNU GPL v3.

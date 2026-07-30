@@ -1,0 +1,16 @@
+{
+  "name": "figma-to-arkui",
+  "version": "1.0.0",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "packageManager": "pnpm@9.14.4",
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "check": "pnpm test && pnpm typecheck && pnpm build"
+  },
+  "devDependencies": {
+    "turbo": "^2.9.12"
+  }
+}

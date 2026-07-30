@@ -1,0 +1,7 @@
+{
+  "extends": "tsconfig/react-library.json",
+  "compilerOptions": {
+    "types": ["react-syntax-highlighter"]
+  },
+  "include": ["src"]
+}

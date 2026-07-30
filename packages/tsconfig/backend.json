@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Backend",
+  "extends": "./base.json",
+  "exclude": ["node_modules"]
+}

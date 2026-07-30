@@ -1,0 +1,13 @@
+{
+  "extends": "tsconfig/react-library.json",
+  "compilerOptions": {
+    "target": "ES2021",
+    "moduleResolution": "Bundler",
+    "types": [
+      "@figma/plugin-typings",
+      "react-syntax-highlighter",
+      "vite/client"
+    ]
+  },
+  "include": ["plugin-src", "ui-src", "vite.config.ts"]
+}

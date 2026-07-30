@@ -1,0 +1,88 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--figma-color-text, #1f1f1f);
+  background: var(--figma-color-bg, #fff);
+}
+
+* { box-sizing: border-box; }
+html, body, #root { width: 100%; height: 100%; margin: 0; }
+button, a { font: inherit; }
+button { color: inherit; }
+
+.plugin-shell { display: flex; flex-direction: column; height: 100%; }
+.toolbar {
+  display: flex;
+  gap: 6px;
+  padding: 8px;
+  border-bottom: 1px solid var(--figma-color-border, #ddd);
+}
+.mode-selector {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2px;
+  flex: 1;
+  padding: 2px;
+  border-radius: 6px;
+  background: var(--figma-color-bg-secondary, #eee);
+}
+.mode-option, .icon-button, .expand-button {
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+.mode-option { min-width: 0; height: 28px; padding: 0 6px; border-radius: 4px; font-size: 12px; }
+.mode-option.active, .icon-button.active {
+  color: var(--figma-color-text-onbrand, #fff);
+  background: var(--figma-color-bg-brand, #0d99ff);
+}
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+}
+.icon-button:not(.active):hover,
+.mode-option:not(.active):hover {
+  background: var(--figma-color-bg-hover, #e5e5e5);
+}
+main { min-height: 0; flex: 1; overflow: auto; }
+.center-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.empty-state { flex-direction: column; gap: 10px; color: var(--figma-color-text-secondary, #777); font-size: 13px; }
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--figma-color-border, #bbb);
+  border-top-color: var(--figma-color-bg-brand, #0d99ff);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.code-panel { min-height: 100%; background: #111b27; }
+.code-panel > header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 42px;
+  padding: 0 10px 0 14px;
+  color: #f5f7fa;
+  background: #172332;
+}
+.code-panel h1 { margin: 0; font-size: 13px; font-weight: 600; }
+.code-panel .icon-button:hover { background: #2c3c50; }
+.expand-button { width: 100%; padding: 10px; color: #72b7ff; background: #172332; }
+.about { max-width: 520px; padding: 24px; line-height: 1.55; }
+.about h1 { margin: 0 0 16px; font-size: 22px; }
+.about p { color: var(--figma-color-text-secondary, #666); }
+.about-links { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; }
+.about a { display: inline-flex; align-items: center; gap: 5px; color: var(--figma-color-text-brand, #007be5); }

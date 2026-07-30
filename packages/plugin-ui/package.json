@@ -1,0 +1,25 @@
+{
+  "name": "plugin-ui",
+  "version": "1.0.0",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "sideEffects": false,
+  "main": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "scripts": {
+    "typecheck": "tsc --noEmit --ignoreDeprecations 6.0"
+  },
+  "dependencies": {
+    "copy-to-clipboard": "^4.0.2",
+    "lucide-react": "^1.14.0",
+    "react": "^19.2.6",
+    "react-syntax-highlighter": "^16.1.1",
+    "types": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-syntax-highlighter": "15.5.13",
+    "tsconfig": "workspace:*",
+    "typescript": "^6.0.3"
+  }
+}

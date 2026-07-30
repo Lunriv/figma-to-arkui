@@ -1,0 +1,31 @@
+{
+  "name": "plugin",
+  "version": "1.0.0",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "build": "pnpm run build:ui && pnpm run build:main --minify --tree-shaking=true",
+    "build:main": "esbuild plugin-src/code.ts --bundle --target=ES2021 --outfile=dist/code.js",
+    "build:ui": "vite build --minify esbuild",
+    "typecheck": "tsc --noEmit --ignoreDeprecations 6.0"
+  },
+  "dependencies": {
+    "@figma/plugin-typings": "^1.125.0",
+    "backend": "workspace:*",
+    "plugin-ui": "workspace:*",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "types": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/react-syntax-highlighter": "15.5.13",
+    "@vitejs/plugin-react-swc": "^4.3.0",
+    "esbuild": "^0.28.0",
+    "tsconfig": "workspace:*",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.12",
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}
